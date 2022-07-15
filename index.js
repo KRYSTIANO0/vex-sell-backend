@@ -55,7 +55,7 @@ mongoose
 		`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@nextjs.dakai.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
 	)
 	.then(() => {
-		app.listen(port, () => {
+		app.listen(process.env.PORT || 5000, () => {
 			console.log(`App listening on port ${process.env.PORT || 5000}...`)
 		})
 	})
